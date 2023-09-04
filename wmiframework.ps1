@@ -1,21 +1,12 @@
-m               m                    m               # 
-#       mmm   mm#mm   mmm    mmm   mm#mm  m   m   mmm# 
-#      "   #    #    #"  #  #"  #    #    #   #  #" "# 
-#      m"""#    #    #""""  #""""    #    #   #  #   # 
-#mmmmm "mm"#    "mm  "#mm"  "#mm"    "mm  "mm"#  "#m## 
-
-#blue prism asset enumeration tool v1.3.0
 #using winrm quickconfig on assets
 
 #michael argo 10/21/2022
 
-#lateetud inc
+
 
 #description
 #takes wmi information from a list of machines and uploads it to sql table 
 #sleeps for sleepytime seconds and then runs again in a while true
-
-#bugs / todo
 
 #5985 5986 enable for winrm
 #135 enable for winrm
@@ -23,49 +14,7 @@ m               m                    m               #
 #net start rpcss & net start Winmgmt
 #HKLM:\Software\Microsoft\Ole :: EnableDCOM  (should be "Y")
 
-#prototypes
-#credential getcredentialfromcredman
-#getdatetimefromserver(hostname)
-#bool setcruisecredential(user,pass)
-#user readcredentialfileuser()
-#readcredentialfilepassword
-#startbpservice
-#startautomatetask
-#testport
-#gethostup
-#gethostlist
-#getconfigfile
-#getpercentage
-#getinversepercentage
-#validatesqlstring
-#getcpuaverageload
-#getfreespace
-#gettotalspace
-#getfreememory
-#gettotalmemory
-#getosversion
-#gethostname 
-#getsqlreachable
-#getbpasportrunning
-#getbprrportrunning
-#gethostcount
-#getnumusers
-#getloggedinuser
-#getrunningprocesses
-#getinstalledsoftware
-#getphysicaldrives
-#getuseraccounts
-#getipaddress
-#connectsqlserverdatabase
-#readsqldata
-#writesqldata
-#closesqlconnection
-#getvalidhostlist
-#getblueprismappservers
-#getblueprismruntimeresources
-#getblueprisminteractiveclients
-#getcurrenttimezone
-#readparametersfromwebui
+
 
 #Requires -version 2
 Clear-Host
@@ -73,7 +22,7 @@ set-location "~"
 
 $timeout = 2000 #network test timeout in ms
 $filepath = '~' #path to conf files
-$configfile = $filepath + "\bpframework.conf" 
+$configfile = $filepath + "\wmiframework.conf" 
 $hostlist = $filepath + "\hostlist.txt"
 $errorlog = $filepath + "\errorlog.txt"
 $bannerfile = $filepath + "\lbanner.txt"
